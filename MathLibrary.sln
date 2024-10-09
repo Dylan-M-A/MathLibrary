@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLibrary", "MathLibrary\MathLibrary.csproj", "{5911D28E-8FB3-4C15-8449-92DAE1C35CEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sandbox", "Sandbox\Sandbox.csproj", "{CC78726C-ABE8-448D-9377-95C4C6B4431A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5911D28E-8FB3-4C15-8449-92DAE1C35CEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5911D28E-8FB3-4C15-8449-92DAE1C35CEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5911D28E-8FB3-4C15-8449-92DAE1C35CEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC78726C-ABE8-448D-9377-95C4C6B4431A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC78726C-ABE8-448D-9377-95C4C6B4431A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC78726C-ABE8-448D-9377-95C4C6B4431A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC78726C-ABE8-448D-9377-95C4C6B4431A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
