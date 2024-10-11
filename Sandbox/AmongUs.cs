@@ -58,6 +58,10 @@ namespace Sandbox
 
                 Raylib.EndDrawing();
             }
+            Raylib.IsKeyDown(KeyboardKey.Left);
+            Raylib.IsKeyDown(KeyboardKey.Right);
+            Raylib.IsKeyDown(KeyboardKey.Up);
+            Raylib.IsKeyDown(KeyboardKey.Down);
 
             Raylib.CloseWindow();
         }
