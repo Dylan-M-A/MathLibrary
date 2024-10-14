@@ -8,22 +8,25 @@ using System.Numerics;
 
 namespace MathLibrary
 {
-    public class Vector2
+    public struct Vector2
     {
         float x, y;
 
-        public Vector2()
-        {
-            x = 0;
-            y = 0;
-        }
-
-        public Vector2(float x, float y)
+        public Vector2(float x = 0, float y = 0)
         {
             this.x = x;
             this.y = y;
         }
 
+        public static bool operator ==(Vector2 lhs, Vector2 rhs)
+        {
+            return (lhs.x == rhs.x && lhs.y == rhs.y);
+        }
+
+        public static bool operator !=(Vector2 lhs, Vector2 rhs)
+        {
+            return !(lhs == rhs);
+        }
         //operater overload for addition
         public static Vector2 operator +(Vector2 left, Vector2 right)
         {

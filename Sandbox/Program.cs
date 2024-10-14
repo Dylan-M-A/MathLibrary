@@ -1,8 +1,4 @@
-﻿using MathLibrary;
-using Raylib_cs;
-using System.Numerics;
-
-namespace Sandbox
+﻿namespace Sandbox
 {
     internal class Program
     {
