@@ -56,13 +56,43 @@ namespace Sandbox
                 Raylib.DrawRectangle(165, 80, 10, 30, Color.SkyBlue);
                 Raylib.DrawRectangle(175, 80, 10, 30, Color.Black);
 
+                Raylib.DrawRectangle(55, 250, 90, 10, Color.Black);
+                Raylib.DrawRectangle(45, 260, 10, 10, Color.Black);
+                Raylib.DrawRectangle(35, 270, 10, 20, Color.Black);
+                Raylib.DrawRectangle(25, 290, 10, 10, Color.Black);
+                Raylib.DrawRectangle(15, 300, 10, 50, Color.Black);
+                Raylib.DrawRectangle(25, 350, 10, 10, Color.Black);
+                Raylib.DrawRectangle(35, 360, 10, 10, Color.Black);
+                Raylib.DrawRectangle(55, 380, 10, 10, Color.Black);
+                Raylib.DrawRectangle(65, 390, 10, 10, Color.Black);
+                Raylib.DrawRectangle(45, 330, 10, 50, Color.Black);
+                Raylib.DrawRectangle(55, 320, 10, 10, Color.Black);
+                Raylib.DrawRectangle(65, 310, 10, 10, Color.Black);
+                Raylib.DrawRectangle(75, 400, 110, 10, Color.Black);
+                Raylib.DrawRectangle(185, 330, 10, 70, Color.Black);
+                Raylib.DrawRectangle(175, 340, 10, 50, Color.Black);
+                Raylib.DrawRectangle(155, 390, 20, 10, Color.Black);
+                Raylib.DrawRectangle(145, 370, 10, 30, Color.Black);
+                Raylib.DrawRectangle(105, 370, 10, 30, Color.Black);
+                Raylib.DrawRectangle(175, 320, 10, 10, Color.Black);
+                Raylib.DrawRectangle(165, 280, 10, 40, Color.Black);
+                Raylib.DrawRectangle(155, 270, 10, 10, Color.Black);
+                Raylib.DrawRectangle(145, 260, 10, 10, Color.Black);
+                Raylib.DrawRectangle(165, 330, 10, 10, Color.Black);
+                Raylib.DrawRectangle(75, 320, 90, 10, Color.Black);
+                Raylib.DrawRectangle(55, 300, 110, 10, Color.Black);
+                Raylib.DrawRectangle(45, 290, 10, 10, Color.Black);
+                Raylib.DrawRectangle(65, 330, 10, 50, Color.Black);
+                Raylib.DrawRectangle(75, 380, 30, 10, Color.Black);
+                Raylib.DrawRectangle(115, 360, 10, 10, Color.Black);
+                Raylib.DrawRectangle(105, 340, 10, 20, Color.Black);
+                Raylib.DrawRectangle(115, 330, 20, 10, Color.Black);
+                Raylib.DrawRectangle(135, 340, 10, 10, Color.Black);
+                Raylib.DrawRectangle(145, 350, 10, 10, Color.Black);
+                Raylib.DrawRectangle(155, 360, 20, 10, Color.Black);
+
                 Raylib.EndDrawing();
             }
-            Raylib.IsKeyDown(KeyboardKey.Left);
-            Raylib.IsKeyDown(KeyboardKey.Right);
-            Raylib.IsKeyDown(KeyboardKey.Up);
-            Raylib.IsKeyDown(KeyboardKey.Down);
-
             Raylib.CloseWindow();
         }
     }

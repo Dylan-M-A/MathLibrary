@@ -10,12 +10,39 @@ namespace MathLibrary
 {
     public struct Vector2
     {
-        float x, y;
+        public float x, y;
 
+        public float Magnitude
+        {
+            get
+            {
+                //c = sqrt(x^2 + y^2)
+                return (float)Math.Abs(Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2)));
+            }
+        }
+
+        public Vector2 Normalized
+        {
+            get
+            {
+                return this / Magnitude;
+            }
+        }
         public Vector2(float x = 0, float y = 0)
         {
             this.x = x;
             this.y = y;
+        }
+
+        public Vector2 Normalize()
+        {
+            this = Normalized;
+            return this;
+        }
+
+        public override string ToString()
+        {
+            return "(" + x + ", " + y + ")";
         }
 
         public static bool operator ==(Vector2 lhs, Vector2 rhs)
@@ -39,22 +66,15 @@ namespace MathLibrary
             return new Vector2(left.x - right.x, left.y - right.y);
         }
 
-        //operater overload for multiplication by vecyor
-        public static Vector2 operator *(Vector2 left, Vector2 right)
-        {
-            return new Vector2(left.x * right.x, left.y * right.y);
-        }
-
         //operator overload for multiplication by a scalar
-        public static Vector2 operator *( Vector2 left, float right)
+        public static Vector2 operator *( Vector2 left, float scalar)
         {
-            return new Vector2(left.x * right, left.y * right);
+            return new Vector2(left.x * scalar, left.y * scalar);
         }
-
-        //operater overload for division
-        public static Vector2 operator /(Vector2 left, Vector2 right)
+        
+        public static Vector2 operator /(Vector2 left, float scalar)
         {
-            return new Vector2(left.x / right.x, left.y / right.y);
+            return new Vector2(left.x / scalar, left.y / scalar);
         }
 
         //implicit conversion from System.Numerics.Vector2 to Vector2
