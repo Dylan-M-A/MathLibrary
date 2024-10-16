@@ -45,6 +45,21 @@ namespace MathLibrary
             return "(" + x + ", " + y + ")";
         }
 
+        public float DotProduct(Vector2 other)
+        {
+            return (x * other.x) + (y * other.y);
+        }
+
+        public float Distance(Vector2 other)
+        {
+            return (other - this).Magnitude;
+        }
+
+        public float Angle(Vector2 other)
+        {
+            return (float)Math.Acos(other.DotProduct(this));
+        }
+
         public static bool operator ==(Vector2 lhs, Vector2 rhs)
         {
             return (lhs.x == rhs.x && lhs.y == rhs.y);

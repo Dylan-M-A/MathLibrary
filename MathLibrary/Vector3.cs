@@ -25,6 +25,18 @@ namespace MathLibrary
                 return this / Magnitude;
             }
         }
+        public override string ToString()
+        {
+            return "(" + x + ", " + y + ", " + z + ")";
+        }
+        public float DotProduct(Vector3 other)
+        {
+            return (x * other.x) + (y * other.y) + (z * other.z);
+        }
+        public Vector3 CrossProduct(Vector3 left, Vector3 right)
+        {
+            return new Vector3((left.y * right.z) - (left.z * right.y), (left.z * right.x) - (left.x * right.z), (left.x * right.y) - (left.y * right.x));
+        }
         public Vector3(float x = 0, float y = 0, float z = 0)
         {
             this.x = x;
@@ -35,10 +47,6 @@ namespace MathLibrary
         {
             this = Normalized;
             return this;
-        }
-        public override string ToString()
-        {
-            return "(" + x + ", " + y + ", " + z + ")";
         }
         public static bool operator ==(Vector3 lhs, Vector3 rhs)
         {
