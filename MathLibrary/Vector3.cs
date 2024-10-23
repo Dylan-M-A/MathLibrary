@@ -37,6 +37,14 @@ namespace MathLibrary
         {
             return new Vector3((left.y * right.z) - (left.z * right.y), (left.z * right.x) - (left.x * right.z), (left.x * right.y) - (left.y * right.x));
         }
+        public Vector3 CrossProduct(Vector3 right)
+        {
+            return new Vector3((this.y * right.z) - (this.z * right.y), (this.z * right.x) - (this.x * right.z), (this.x * right.y) - (this.y * right.x));
+        }
+        public static Vector3 operator *(float scalar, Vector3 right)
+        {
+            return new Vector3(scalar * right.x, scalar * right.y, scalar * right.z);
+        }
         public Vector3(float x = 0, float y = 0, float z = 0)
         {
             this.x = x;
@@ -70,7 +78,6 @@ namespace MathLibrary
         {
             return new Vector3(left.x * scalar, left.y * scalar, left.z * scalar);
         }
-
         public static Vector3 operator /(Vector3 left, float scalar)
         {
             return new Vector3(left.x / scalar, left.y / scalar, left.z / scalar);

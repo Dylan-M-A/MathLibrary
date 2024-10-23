@@ -37,7 +37,31 @@ namespace MathLibrary
                     0, 0, 1);
             }
         }
-
+        public static Matrix3 CreateTranslation(float x, float y)
+        {
+            return new Matrix3(
+                1, 0, x,
+                0, 1, y,
+                0, 0, 1);
+        }
+        public static Matrix3 CreateRotation(float radians)
+        {
+            return new Matrix3(0, (float)Math.Cos(radians), -(float)Math.Sin(radians),
+                               0, (float)Math.Sin(radians), (float)Math.Cos(radians), 
+                               0, 0, 1);
+        }
+        public static Matrix3 CreateScale(float x, float y)
+        {
+            return new Matrix3(x, 0, 0,
+                               0, y, 0,
+                               0, 0, 1);
+        }
+        public static Vector3 operator *(Matrix3 a, Vector3 b)
+        {
+            return new Vector3((a.m00 * b.x) + (a.m01 * b.y) + (a.m02 * b.z),
+                               (a.m10 * b.x) + (a.m11 * b.y) + (a.m12 * b.z),
+                               (a.m20 * b.x) + (a.m21 * b.y) + (a.m22 * b.z));
+        }
         public static Matrix3 operator +(Matrix3 a, Matrix3 b)
         {
             return new Matrix3(

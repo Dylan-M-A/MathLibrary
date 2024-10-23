@@ -86,6 +86,10 @@ namespace MathLibrary
         {
             return new Vector2(left.x * scalar, left.y * scalar);
         }
+        public static Vector2 operator *(float scalar, Vector2 right)
+        {
+            return new Vector2(scalar * right.x, scalar * right.y);
+        }
         
         public static Vector2 operator /(Vector2 left, float scalar)
         {

@@ -46,7 +46,49 @@ namespace MathLibrary
                     0, 0, 0, 1);
             }
         }
-
+        public static Matrix4 CreateScale(float x, float y, float z)
+        {
+            return new Matrix4(
+                x, 0, 0, 0,
+                0, y, 0, 0,
+                0, 0, z, 0,
+                0, 0, 0, 1);
+        }
+        public static Matrix4 CreateRotationX(float radians)
+        {
+            return new Matrix4(1, 0, 0, 0,
+                               0, (float)Math.Cos(radians), -(float)Math.Sin(radians), 0,
+                               0, (float)Math.Sin(radians), (float)Math.Cos(radians), 0,
+                               0, 0, 0, 1);
+        }
+        public static Matrix4 CreateRotationY(float radians)
+        {
+            return new Matrix4((float)Math.Cos(radians), 0, (float)Math.Sin(radians), 0,
+                               0, 0, 0, 0,
+                               -(float)Math.Sin(radians), 0, (float)Math.Cos(radians), 0,
+                               0, 0, 0, 1);
+        }
+        public static Matrix4 CreateRotationZ(float radians)
+        {
+            return new Matrix4(1, (float)Math.Cos(radians), -(float)Math.Sin(radians), 0,
+                               0, (float)Math.Sin(radians), (float)Math.Cos(radians), 0,
+                               0, 0, 1, 0,
+                               0, 0, 0, 1);
+        }
+        public static Matrix4 CreatTranslation(float x, float y, float z)
+        {
+            return new Matrix4(1, 0, 0, x,
+                               0, 1, 0, y,
+                               0, 0, 0, z,
+                               0, 0, 0, 1);
+        }
+        public static Vector4 operator *(Matrix4 a, Vector4 b)
+        {
+            return new Vector4((a.m00 * b.x) + (a.m01 * b.y) + (a.m02 * b.z) + (a.m03 * b.w),
+                               (a.m10 * b.x) + (a.m11 * b.y) + (a.m12 * b.z) + (a.m13 * b.w),
+                               (a.m20 * b.x) + (a.m21 * b.y) + (a.m22 * b.z) + (a.m23 * b.w),
+                               (a.m30 * b.x) + (a.m31 * b.y) + (a.m32 * b.z) + (a.m33 * b.w));
+        }
         public static Matrix4 operator +(Matrix4 a, Matrix4 b)
         {
             return new Matrix4(
