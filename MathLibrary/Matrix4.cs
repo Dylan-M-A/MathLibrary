@@ -54,32 +54,32 @@ namespace MathLibrary
                 0, 0, z, 0,
                 0, 0, 0, 1);
         }
-        public static Matrix4 CreateRotationX(float radians)
+        public static Matrix4 CreateRotationZ(float radians)
         {
-            return new Matrix4(1, 0, 0, 0,
-                               0, (float)Math.Cos(radians), -(float)Math.Sin(radians), 0,
-                               0, (float)Math.Sin(radians), (float)Math.Cos(radians), 0,
+            return new Matrix4((float)Math.Cos(radians), -(float)Math.Sin(radians), 0, 0,
+                               (float)Math.Sin(radians), (float)Math.Cos(radians), 0, 0,
+                               0, 0, 1, 0,
                                0, 0, 0, 1);
         }
         public static Matrix4 CreateRotationY(float radians)
         {
             return new Matrix4((float)Math.Cos(radians), 0, (float)Math.Sin(radians), 0,
-                               0, 0, 0, 0,
+                               0, 1, 0, 0,
                                -(float)Math.Sin(radians), 0, (float)Math.Cos(radians), 0,
                                0, 0, 0, 1);
         }
-        public static Matrix4 CreateRotationZ(float radians)
+        public static Matrix4 CreateRotationX(float radians)
         {
-            return new Matrix4(1, (float)Math.Cos(radians), -(float)Math.Sin(radians), 0,
-                               0, (float)Math.Sin(radians), (float)Math.Cos(radians), 0,
-                               0, 0, 1, 0,
+            return new Matrix4(1, 0, 0, 0,
+                               0, (float)Math.Cos(radians), (float)Math.Sin(radians), 0,
+                               0, -(float)Math.Sin(radians), (float)Math.Cos(radians), 0,
                                0, 0, 0, 1);
         }
-        public static Matrix4 CreatTranslation(float x, float y, float z)
+        public static Matrix4 CreateTranslation(float x, float y, float z)
         {
             return new Matrix4(1, 0, 0, x,
                                0, 1, 0, y,
-                               0, 0, 0, z,
+                               0, 0, 1, z,
                                0, 0, 0, 1);
         }
         public static Vector4 operator *(Matrix4 a, Vector4 b)

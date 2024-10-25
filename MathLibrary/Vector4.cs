@@ -33,9 +33,9 @@ namespace MathLibrary
         {
             return (x * other.x) + (y * other.y) + (z * other.z) + (w * other.w);
         }
-        public Vector4 CrossProduct(Vector4 @this, Vector4 right)
+        public Vector4 CrossProduct(Vector4 left, Vector4 right)
         {
-            return new Vector4((@this.y * right.z) - (@this.z * right.y), (@this.z * right.w) - (@this.w * right.z), (@this.w * right.x) - (@this.x * right.w), (@this.x * right.y) - (@this.y * right.x));
+            return new Vector4((left.y * right.z) - (left.z * right.y), (left.z * right.w) - (left.w * right.z), (left.w * right.x) - (left.x * right.w), (left.x * right.y) - (left.y * right.x));
         }
         public Vector4 CrossProduct(Vector4 right)
         {

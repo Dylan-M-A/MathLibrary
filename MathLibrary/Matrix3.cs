@@ -40,14 +40,14 @@ namespace MathLibrary
         public static Matrix3 CreateTranslation(float x, float y)
         {
             return new Matrix3(
-                1, 0, x,
-                0, 1, y,
-                0, 0, 1);
+                1, 0, 0,
+                0, 1, 0,
+                x, y, 1);
         }
         public static Matrix3 CreateRotation(float radians)
         {
-            return new Matrix3(0, (float)Math.Cos(radians), -(float)Math.Sin(radians),
-                               0, (float)Math.Sin(radians), (float)Math.Cos(radians), 
+            return new Matrix3((float)Math.Cos(radians), -(float)Math.Sin(radians), 0,
+                               (float)Math.Sin(radians), (float)Math.Cos(radians), 0,
                                0, 0, 1);
         }
         public static Matrix3 CreateScale(float x, float y)
