@@ -32,7 +32,7 @@ namespace MathLibrary
             this.m31 = m31;
             this.m32 = m32;
             this.m33 = m33;
-        }
+          }
 
         public static Matrix4 Identity
         {
