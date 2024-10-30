@@ -30,8 +30,14 @@ namespace Sandbox
                 t1.Translate(t1.Forward * 50 * Raylib.GetFrameTime());
                 t1.Rotate(0.5f * Raylib.GetFrameTime());
 
-                Raylib.DrawRectangleV(t1.GlobalPosition, t1.GlobalScale, Color.Blue);
-                Raylib.DrawLineV(t1.GlobalPosition + offset, t1.GlobalPosition + offset + (t1.Forward * 100), Color.SkyBlue);
+                Rectangle rect = new Rectangle(t1.GlobalPosition + offset, t1.GlobalScale);
+                Raylib.DrawRectanglePro(
+                    rect,
+                    new Vector2(0, 0) + offset,
+                    -t1.GlobalRotationAngle * (100 / (float)Math.PI),
+                    Color.Blue);
+
+                Raylib.DrawLineV(t1.GlobalPosition + offset, t1.GlobalPosition + offset + (t1.Forward * 100), Color.Red);
                 Raylib.EndDrawing();
             }
 

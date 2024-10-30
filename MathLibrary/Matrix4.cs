@@ -56,7 +56,7 @@ namespace MathLibrary
         }
         public static Matrix4 CreateRotationZ(float radians)
         {
-            return new Matrix4((float)Math.Cos(radians), -(float)Math.Sin(radians), 0, 0,
+            return new Matrix4((float)Math.Cos(radians), -MathF.Sin(radians), 0, 0,
                                (float)Math.Sin(radians), (float)Math.Cos(radians), 0, 0,
                                0, 0, 1, 0,
                                0, 0, 0, 1);
@@ -65,14 +65,14 @@ namespace MathLibrary
         {
             return new Matrix4((float)Math.Cos(radians), 0, (float)Math.Sin(radians), 0,
                                0, 1, 0, 0,
-                               -(float)Math.Sin(radians), 0, (float)Math.Cos(radians), 0,
+                               (float)-Math.Sin(radians), 0, (float)Math.Cos(radians), 0,
                                0, 0, 0, 1);
         }
         public static Matrix4 CreateRotationX(float radians)
         {
             return new Matrix4(1, 0, 0, 0,
                                0, (float)Math.Cos(radians), (float)Math.Sin(radians), 0,
-                               0, -(float)Math.Sin(radians), (float)Math.Cos(radians), 0,
+                               0, -MathF.Sin(radians), (float)Math.Cos(radians), 0,
                                0, 0, 0, 1);
         }
         public static Matrix4 CreateTranslation(float x, float y, float z)

@@ -22,6 +22,8 @@ namespace MathLibrary
         {
             get
             {
+                if (Magnitude == 0)
+                    return new Vector4();
                 return this / Magnitude;
             }
         }
@@ -35,11 +37,11 @@ namespace MathLibrary
         }
         public Vector4 CrossProduct(Vector4 left, Vector4 right)
         {
-            return new Vector4((left.y * right.z) - (left.z * right.y), (left.z * right.w) - (left.w * right.z), (left.w * right.x) - (left.x * right.w), (left.x * right.y) - (left.y * right.x));
+            return new Vector4((left.y * right.z) - (left.z * right.y), (left.z * right.x) - (left.x * right.z), (left.x * right.y) - (left.y * right.x), 0);
         }
         public Vector4 CrossProduct(Vector4 right)
         {
-            return new Vector4((this.y * right.z) - (this.z * right.y), (this.z * right.w) - (this.w * right.z), (this.w * right.x) - (this.x * right.w), (this.x * right.y) - (this.y * right.x));
+            return new Vector4((y * right.z) - (z * right.y), (z * right.x) - (x * right.z), (x * right.y) - (y * right.x), 0);
         }
         public static Vector4 operator *(float scalar, Vector4 right)
         {
@@ -65,7 +67,7 @@ namespace MathLibrary
         {
             return !(lhs == rhs);
         }
-        //operater overload for addition
+        //operater overload for addition 
         public static Vector4 operator +(Vector4 left, Vector4 right)
         {
             return new Vector4(left.x + right.x, left.y + right.y, left.z + right.z, left.w + right.w);
