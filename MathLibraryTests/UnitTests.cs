@@ -384,14 +384,14 @@ const float DEFAULT_TOLERANCE = 0.0001f;
         {
             Matrix4 m4b = new Matrix4();
             m4b = Matrix4.CreateRotationY(-2.6f);
-            m4b = Transpose(m4b);
+           m4b = Transpose(m4b);
 
             Matrix4 m4c = new Matrix4();
             m4c = Matrix4.CreateRotationZ(0.72f);
             m4c = Transpose(m4c);
 
             Matrix4 m4d = m4c * m4b;
-
+           
             Matrix4 expected = new Matrix4(-0.644213855267f, 0.659384668f, 0.3875569210f, 0, 0.5650192710f, 0.751805722713f, -0.3399137459f, 0, -0.51550144f, 0, -0.856888711452f, 0, 0, 0, 0, 1);
             Assert.IsTrue(compare(m4d, expected), "Expected: \n" + Matrix4ToString(expected) + "\n" + "Received: \n" + Matrix4ToString(m4d));
         }
