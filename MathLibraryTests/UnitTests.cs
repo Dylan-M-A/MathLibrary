@@ -379,7 +379,7 @@ const float DEFAULT_TOLERANCE = 0.0001f;
         }
 
         [TestMethod]
-
+        //couldn't get this to work even with Teacher help
         public void Matrix4Multiply()
         {
             Matrix4 m4b = new Matrix4();
